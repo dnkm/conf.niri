@@ -3,32 +3,29 @@ binds {
     // ────────────── Keybindings ──────────────
     // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
 
-    // ─── noctalia-shell keybinds ───
-    // https://docs.noctalia.dev/getting-started/keybinds/
-
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    MOD+RETURN                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn "alacritty"; }
+    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: fuzzel" { spawn "fuzzel"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
-    MOD+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
 
     // Please choose your own file manager.
     MOD+SHIFT+X                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
-    MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
-    MOD+E                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
+    MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "alacritty -e yazi"; }
+    MOD+E                               hotkey-overlay-title="Email" { spawn-sh "alacritty -e aerc"; }
 
     // --- audio controls with keyboard
-    MOD+F12                             allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    MOD+F11                             allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    MOD+F10                             allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    MOD+F12                             allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; }
+    MOD+F11                             allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; }
+    MOD+F10                             allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
 
     // ─── Audio Controls ───
-    XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; }
+    XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; }
+    XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }
