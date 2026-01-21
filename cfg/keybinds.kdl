@@ -10,11 +10,12 @@ binds {
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: fuzzel" { spawn "fuzzel"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
+    MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
+    MOD+E                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
+    //MOD+SEMICOLON                        hotkey-overlay-title="EMOTE" { spawn "emote"; }
 
     // Please choose your own file manager.
     MOD+SHIFT+X                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
-    MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
-    MOD+E                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
 
     // --- audio controls with keyboard
     MOD+F12                             allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; }
@@ -70,20 +71,20 @@ binds {
     MOD+SHIFT+CTRL+DOWN                 { move-column-to-monitor-down; }
 
     // ─── Workspace Switching ───
-    MOD+SHIFT+WHEELSCROLLDOWN                 cooldown-ms=150 { focus-workspace-down; }
-    MOD+SHIFT+WHEELSCROLLUP                   cooldown-ms=150 { focus-workspace-up; }
-    MOD+SHIFT+CTRL+WHEELSCROLLDOWN            cooldown-ms=150 { move-column-to-workspace-down; }
-    MOD+SHIFT+CTRL+WHEELSCROLLUP              cooldown-ms=150 { move-column-to-workspace-up; }
+    MOD+WHEELSCROLLDOWN                 cooldown-ms=150 { focus-workspace-down; }
+    MOD+WHEELSCROLLUP                   cooldown-ms=150 { focus-workspace-up; }
+    MOD+CTRL+WHEELSCROLLDOWN            cooldown-ms=150 { move-column-to-workspace-down; }
+    MOD+CTRL+WHEELSCROLLUP              cooldown-ms=150 { move-column-to-workspace-up; }
 
     //MOD+WHEELSCROLLRIGHT                { focus-column-right; }
     //MOD+WHEELSCROLLLEFT                 { focus-column-left; }
     //MOD+CTRL+WHEELSCROLLRIGHT           { move-column-right; }
     //MOD+CTRL+WHEELSCROLLLEFT            { move-column-left; }
 
-    MOD+WHEELSCROLLDOWN           { focus-column-right; }
-    MOD+WHEELSCROLLUP             { focus-column-left; }
-    MOD+CTRL+WHEELSCROLLDOWN      { move-column-right; }
-    MOD+CTRL+WHEELSCROLLUP        { move-column-left; }
+    MOD+SHIFT+WHEELSCROLLDOWN           { focus-column-right; }
+    MOD+SHIFT+WHEELSCROLLUP             { focus-column-left; }
+    MOD+SHIFT+CTRL+WHEELSCROLLDOWN      { move-column-right; }
+    MOD+SHIFT+CTRL+WHEELSCROLLUP        { move-column-left; }
 
     MOD+1                               { focus-workspace 1; }
     MOD+2                               { focus-workspace 2; }
