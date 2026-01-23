@@ -11,7 +11,7 @@ binds {
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
     MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
-    MOD+E                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
+    MOD+M                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
     //MOD+SEMICOLON                        hotkey-overlay-title="EMOTE" { spawn "emote"; }
 
     // Please choose your own file manager.
