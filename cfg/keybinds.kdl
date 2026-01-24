@@ -125,6 +125,7 @@ binds {
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
+    MOD+R                               { switch-preset-column-width;}
     MOD+F                               { fullscreen-window; }
     MOD+W                               { toggle-column-tabbed-display; }
 
