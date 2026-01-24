@@ -8,3 +8,12 @@
 	    match app-id="firefox" title="Picture-in-Picture"
 	    open-floating true
     }
+
+
+window-rule {
+    match app-id="mpv";
+    open-floating true;
+    default-column-width { fixed 640; };
+    default-window-height { fixed 480; };
+    default-floating-position x=100 y=100 relative-to="top-left";
+}

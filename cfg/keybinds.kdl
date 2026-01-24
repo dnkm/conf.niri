@@ -12,6 +12,8 @@ binds {
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
     MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
     MOD+M                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
+    MOD+DELETE                            hotkey-overlay-title="Open BTOP: btop" { spawn-sh "kitty -e btop"; }
+
     //MOD+SEMICOLON                        hotkey-overlay-title="EMOTE" { spawn "emote"; }
 
     // Please choose your own file manager.
@@ -116,7 +118,9 @@ binds {
 
     // ─── Layout Controls ───
     MOD+CTRL+F                          { expand-column-to-available-width; }
-    MOD+C                               { center-column; }
+    MOD+C                               { 
+      spawn-sh "niri msg action center-column && niri msg action set-column-width 70%";
+    }
     MOD+CTRL+C                          { center-visible-columns; }
     MOD+MINUS                           { set-column-width "-10%"; }
     MOD+EQUAL                           { set-column-width "+10%"; }
