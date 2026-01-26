@@ -119,7 +119,7 @@ binds {
     // ─── Layout Controls ───
     MOD+CTRL+F                          { expand-column-to-available-width; }
     MOD+C                               { 
-      spawn-sh "niri msg action center-column && niri msg action set-column-width 70%";
+      spawn-sh "niri msg action set-column-width 70% && niri msg action center-column ";
     }
     MOD+CTRL+C                          { center-visible-columns; }
     MOD+MINUS                           { set-column-width "-10%"; }

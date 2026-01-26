@@ -3,4 +3,5 @@
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-at-startup "waybar"
+    spawn-at-startup "beeper"
     spawn-at-startup "bash" "-c" "~/.config/niri/scripts/wallpaper_changer.sh"
