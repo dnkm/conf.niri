@@ -6,14 +6,14 @@ binds {
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    MOD+RETURN                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
+    MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: fuzzel" { spawn "fuzzel"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
-    MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
-    MOD+M                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
-    MOD+DELETE                            hotkey-overlay-title="Open BTOP: btop" { spawn-sh "kitty -e btop"; }
-    MOD+Y                               hotkey-overlay-title="Open Music Player: yt-x" { spawn-sh "kitty -e yt-x"; }
+    MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "ghostty -e yazi"; }
+    MOD+M                               hotkey-overlay-title="Email" { spawn-sh "ghostty -e aerc"; }
+    MOD+DELETE                            hotkey-overlay-title="Open BTOP: btop" { spawn-sh "ghostty -e btop"; }
+    MOD+Y                               hotkey-overlay-title="Open Music Player: youtube-tui" { spawn-sh "ghostty -e youtube-tui"; }
     //MOD+SEMICOLON                        hotkey-overlay-title="EMOTE" { spawn "emote"; }
 
     // Please choose your own file manager.
