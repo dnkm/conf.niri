@@ -13,7 +13,7 @@ binds {
     MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
     MOD+M                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
     MOD+DELETE                            hotkey-overlay-title="Open BTOP: btop" { spawn-sh "kitty -e btop"; }
-    MOD+Y                               hotkey-overlay-title="Open Music Player: youtube-tui" { spawn-sh "kitty -e youtube-tui"; }
+    MOD+Y                               hotkey-overlay-title="Open Music Player: youtube-tui" { spawn-sh "konsole -e youtube-tui"; }
     //MOD+SEMICOLON                        hotkey-overlay-title="EMOTE" { spawn "emote"; }
 
     // Please choose your own file manager.
