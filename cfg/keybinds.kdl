@@ -8,7 +8,7 @@ binds {
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: fuzzel" { spawn "fuzzel"; }
-    MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
+    MOD+B                               hotkey-overlay-title="Open Browser" { spawn "brave"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
     MOD+X                         hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "kitty -e yazi"; }
     MOD+M                               hotkey-overlay-title="Email" { spawn-sh "kitty -e aerc"; }
