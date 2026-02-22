@@ -5,3 +5,4 @@
     spawn-at-startup "waybar"
     spawn-at-startup "beeper"
     spawn-at-startup "bash" "-c" "~/.config/niri/scripts/wallpaper_changer.sh"
+    spawn-at-startup "/usr/lib/pam_kwallet_init"
