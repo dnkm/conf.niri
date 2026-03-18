@@ -29,7 +29,7 @@ binds {
     Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
-       MOD+B                               hotkey-overlay-title="Open Browser" { spawn "firefox"; }
+       MOD+B                               hotkey-overlay-title="Open Browser" { spawn "brave"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
