@@ -146,6 +146,13 @@ layout {
     }
     struts {
     }
+    tab-indicator {
+      place-within-column
+      width 8
+      position "left"
+      hide-when-single-tab
+      
+    }
 }
 layer-rule {
     match namespace="^quickshell$"
