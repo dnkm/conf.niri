@@ -3,6 +3,9 @@
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-at-startup "waybar"
+    spawn-at-startup "mako"
     spawn-at-startup "beeper"
     spawn-at-startup "bash" "-c" "~/.config/niri/scripts/wallpaper_changer.sh"
     spawn-at-startup "/usr/lib/pam_kwallet_init"
+    // Idle: monitors off at 30 min, lock at 60 min, never suspend
+    spawn-at-startup "swayidle" "-w" "timeout" "1800" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "timeout" "3600" "swaylock -f"
